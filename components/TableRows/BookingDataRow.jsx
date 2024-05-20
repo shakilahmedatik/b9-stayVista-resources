@@ -1,7 +1,7 @@
 import { format } from 'date-fns'
 import PropTypes from 'prop-types'
 
-const BookingDataRow = ({ booking }) => {
+const BookingDataRow = ({ booking, refetch }) => {
   return (
     <tr>
       <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
@@ -66,6 +66,7 @@ const BookingDataRow = ({ booking }) => {
 
 BookingDataRow.propTypes = {
   booking: PropTypes.object,
+  refetch: PropTypes.func,
 }
 
 export default BookingDataRow

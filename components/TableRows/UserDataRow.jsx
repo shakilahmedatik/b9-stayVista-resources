@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-const UserDataRow = ({ user }) => {
+const UserDataRow = ({ user, refetch }) => {
   return (
     <tr>
       <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
@@ -30,7 +30,7 @@ const UserDataRow = ({ user }) => {
           ></span>
           <span className='relative'>Update Role</span>
         </span>
-        {/* Modal */}
+        {/* Update User Modal */}
       </td>
     </tr>
   )
@@ -38,6 +38,7 @@ const UserDataRow = ({ user }) => {
 
 UserDataRow.propTypes = {
   user: PropTypes.object,
+  refetch: PropTypes.func,
 }
 
 export default UserDataRow
